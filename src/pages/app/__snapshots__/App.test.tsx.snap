@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Rendering 1`] = `
+<DocumentFragment>
+  <div>
+    <h2>
+      learn react
+    </h2>
+    <button />
+  </div>
+</DocumentFragment>
+`;
