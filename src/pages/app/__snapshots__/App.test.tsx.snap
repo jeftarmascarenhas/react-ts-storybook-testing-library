@@ -4,9 +4,8 @@ exports[`App Rendering 1`] = `
 <DocumentFragment>
   <div>
     <h2>
-      learn react
+      Run command \`yarn storybook\` for you see all components :(
     </h2>
-    <button />
   </div>
 </DocumentFragment>
 `;

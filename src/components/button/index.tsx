@@ -10,15 +10,22 @@ type ButtonProps = {
   label?: string;
   color?: string;
   size?: string;
+  title?: string;
 };
 
 // type DefaultProps = Readonly<typeof defaultProps>;
 
 // const colors = ["primary", "secondary", "tertiary"];
 
-const Button: React.FC<ButtonProps> = ({ onClick, disabled, label, color }) => {
+const Button: React.FC<ButtonProps> = ({
+  onClick,
+  disabled,
+  label,
+  color,
+  title
+}) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button title={title} onClick={onClick} disabled={disabled}>
       {label}
     </button>
   );

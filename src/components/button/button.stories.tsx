@@ -24,13 +24,14 @@ const buttonExamples = (color: string) => {
       <Button label={color} onClick={action("Clicked")} color={color} />
       {` `}
       <Button
-        label={color}
+        label={text("label", color)}
         onClick={action("Clicked")}
         color={color}
-        disabled={true}
+        disabled={boolean("disabled", true)}
       />
     </>
   ));
 };
 
 buttonExamples("primary");
+buttonExamples("secondary");
