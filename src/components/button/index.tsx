@@ -1,11 +1,9 @@
-import React, { MouseEvent } from "react";
+import React from "react";
 
-// const defaultProps = {
-//   color: "primary" as "primary" | "secondary"
-// };
+import * as S from "./styled";
 
 type ButtonProps = {
-  onClick?: (e: MouseEvent<HTMLElement>) => void;
+  onClick?: () => void;
   disabled?: boolean;
   label?: string;
   color?: string;
@@ -13,9 +11,7 @@ type ButtonProps = {
   title?: string;
 };
 
-// type DefaultProps = Readonly<typeof defaultProps>;
-
-// const colors = ["primary", "secondary", "tertiary"];
+const colors = ["primary", "secondary", "tertiary"];
 
 const Button: React.FC<ButtonProps> = ({
   onClick,
@@ -23,12 +19,24 @@ const Button: React.FC<ButtonProps> = ({
   label,
   color,
   title
-}) => {
+}: ButtonProps) => {
   return (
-    <button title={title} onClick={onClick} disabled={disabled}>
-      {label}
-    </button>
+    <S.Button
+      color={color && colors.includes(color) ? color : "primary"}
+      title={title}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      <S.Text>{label}</S.Text>
+    </S.Button>
   );
 };
 
+Button.defaultProps = {
+  disabled: false,
+  label: "",
+  color: "primary",
+  title: "button",
+  size: "sm"
+};
 export default Button;

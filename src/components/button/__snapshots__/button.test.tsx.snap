@@ -2,6 +2,24 @@
 
 exports[`Button correctly rendering 1`] = `
 <DocumentFragment>
-  <button />
+  .c0 {
+  border: 1px solid #00be;
+  color: 1px solid #00be;
+  background-color: 1px solid #00be;
+}
+
+.c0:disabled {
+  border: 1px solid #ccc;
+}
+
+<button
+    class="c0"
+    color="primary"
+    title="button"
+  >
+    <div
+      class=""
+    />
+  </button>
 </DocumentFragment>
 `;

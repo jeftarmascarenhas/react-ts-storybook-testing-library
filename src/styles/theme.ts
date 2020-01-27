@@ -1,9 +1,14 @@
 const theme = {
   fonts: {
-    roboto: "roboto,sans-serif",
+    roboto: "roboto,sans-serif"
+  },
+  colors: {
     black: "#222",
-    white: "#222",
-    green: "#00b26e"
+    white: "#fff",
+    grey: "#ccc",
+    green: "#00b26e",
+    primary: "#00be",
+    secondary: "#111"
   }
 };
 export default theme;

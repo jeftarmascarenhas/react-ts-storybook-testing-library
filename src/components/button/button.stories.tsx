@@ -18,7 +18,7 @@ stories.addWithJSX("Button Tester", () => (
   />
 ));
 
-const buttonExamples = (color: string) => {
+const buttonColorsExamples = (color: string) => {
   stories.add(color, () => (
     <>
       <Button label={color} onClick={action("Clicked")} color={color} />
@@ -26,12 +26,12 @@ const buttonExamples = (color: string) => {
       <Button
         label={text("label", color)}
         onClick={action("Clicked")}
-        color={color}
+        color={select("color", colors, "primary")}
         disabled={boolean("disabled", true)}
       />
     </>
   ));
 };
 
-buttonExamples("primary");
-buttonExamples("secondary");
+buttonColorsExamples("primary");
+buttonColorsExamples("secondary");
